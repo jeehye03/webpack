@@ -1,6 +1,16 @@
-import React from "react";
+import * as React from 'react';
+import { hot } from 'react-hot-loader';
+import GlobalStyled from './GlobalStyle';
+import Mob from './Mob';
+import Web from './Web';
 
 function App() {
-  return <div>안녕!</div>;
+  return (
+    <>
+      <GlobalStyled />
+      <Web />
+      {/* <Mob /> */}
+    </>
+  );
 }
-export default App;
+export default hot(module)(App);
