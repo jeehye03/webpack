@@ -15,7 +15,7 @@ function Web() {
         </div>
       </Header>
       <Section>
-        <Div>
+        <Content>
           <h1>
             위드유 컴퍼니만의
             <br />
@@ -27,7 +27,7 @@ function Web() {
             <img src={arrowRight} alt="" />
           </Arrow>
           <Memo />
-        </Div>
+        </Content>
       </Section>
     </Wrap>
   );
@@ -72,7 +72,7 @@ const Section = styled.section`
   }
 `;
 
-const Div = styled.div`
+const Content = styled.div`
   position: relative;
   max-width: 1200px;
   margin: auto;
