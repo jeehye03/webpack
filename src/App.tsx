@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <GlobalStyled />
-      <Mob />
+      {/* <Mob /> */}
       <Web />
     </>
   );
