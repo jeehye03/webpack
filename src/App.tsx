@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <GlobalStyled />
+      <Mob />
       <Web />
-      {/* <Mob /> */}
     </>
   );
 }
