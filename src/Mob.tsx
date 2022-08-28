@@ -6,9 +6,20 @@ import logo from './assets/icon/logo.svg';
 import arrow from './assets/icon/arrowMob.svg';
 import img from './assets/images/img.png';
 
+type ItemType = {
+  id: number;
+  title: string;
+  status: string;
+  offer: string;
+  applicantsCnt: number;
+  recruitCnt: number;
+  date: string;
+  contents: string;
+};
+
 function Mob() {
-  const [ScrollY, setScrollY] = useState(0);
-  const [ScrollActive, setScrollActive] = useState(false);
+  const [ScrollY, setScrollY] = useState<number>(0);
+  const [ScrollActive, setScrollActive] = useState<boolean>(false);
   const [data, setData] = useState(dataList);
 
   function handleScroll() {
@@ -23,11 +34,11 @@ function Mob() {
   useEffect(() => {
     function scrollListener() {
       window.addEventListener('scroll', handleScroll);
-    } //  window 에서 스크롤을 감시 시작
-    scrollListener(); // window 에서 스크롤을 감시
+    }
+    scrollListener();
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    }; //  window 에서 스크롤을 감시를 종료
+    };
   });
 
   return (
@@ -49,7 +60,7 @@ function Mob() {
 
       <img src={img} alt="" />
       <Article>
-        {data.map((item) => (
+        {data.map((item: ItemType) => (
           <div key={item.id}>
             {!ScrollActive && <h3>{item.title}</h3>}
             <span>{item.status}</span>
